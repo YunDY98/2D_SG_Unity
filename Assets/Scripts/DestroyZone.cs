@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyZone : MonoBehaviour
-{
+{   //OnCollisionEnter(Collision other)
+    //OnTriggerEnter(Collider other)
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+         if(other.gameObject.CompareTag("Player"))
         {
             return;
         }
         
        
-        
-      
-       
         Destroy(other.gameObject);
         
     }
+
+  
         
     
     // Start is called before the first frame update
