@@ -40,11 +40,17 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        
-        Destroy(other.gameObject);
-
         Destroy(gameObject);
 
+        
+        if (other.gameObject.tag != "wall")
+        {
+             Destroy(other.gameObject);
+        }
+
+       
+
+       
 
     }
 
