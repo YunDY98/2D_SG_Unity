@@ -15,7 +15,7 @@ public class PlayerFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire112"))
+        if(Input.GetButtonDown("Fire1"))
         {
             GameObject bullet = Instantiate(bulletFactory);
             bullet.transform.position = firePostion.transform.position;
