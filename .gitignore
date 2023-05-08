@@ -1,6 +1,13 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,unity,macos,visualstudiocode,visualstudio,xcode
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,unity,macos,visualstudiocode,visualstudio,xcode
 
+##Asset##
+/Assets/JMO Assets/*
+/Assets/AurynSky/*
+/Assets/AwesomeCartoonPlanes/*
+
+
+
 ### macOS ###
 # General
 .DS_Store

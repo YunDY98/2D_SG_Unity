@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-     Vector3 dir;
+    Vector3 dir;
     public float speed = 5;
     // Start is called before the first frame update
+
+    GameObject player;
+
+    public GameObject explosionFactory;
+
     void Start()
     {
        
@@ -45,7 +50,9 @@ public class Enemy : MonoBehaviour
         
         if (other.gameObject.tag != "wall")
         {
-             Destroy(other.gameObject);
+            GameObject explosion = Instantiate(explosionFactory);
+            explosion.transform.position = transform.position;
+            Destroy(other.gameObject);
         }
 
        
