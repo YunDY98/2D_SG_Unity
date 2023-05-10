@@ -5,12 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {   
     public float speed = 5;
-    private void OnCollisionStay()
-    {
-       
 
-
-    }
     
     // Start is called before the first frame update
     void Start()
@@ -30,4 +25,6 @@ public class PlayerMove : MonoBehaviour
         transform.position += dir * speed * Time.deltaTime;
        
     }
+
+
 }
