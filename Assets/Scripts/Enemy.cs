@@ -45,6 +45,10 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+
+       
+        
+
         Destroy(gameObject);
 
         
@@ -55,7 +59,23 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-       
+
+        GameObject smObject = GameObject.Find("ScoreManager");
+
+        ScoreManager sm = smObject.GetComponent<ScoreManager>();
+
+        sm.currentScore++;
+
+        sm.currentScoreUI.text = "현재 점수 : " + sm.currentScore;
+
+        if(sm.currentScore > sm.BestScore)
+        {
+            sm.BestScore = sm.currentScore;
+
+            sm.BestScoreUI.text = "최고 점수 : " + sm.BestScore;
+
+            PlayerPrefs.SetInt("Best Score",sm.BestScore);
+        }
 
        
 
